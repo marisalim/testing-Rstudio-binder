@@ -3,9 +3,7 @@
 [![Binder](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/marisalim/testing-Rstudio-binder/stable-binder?urlpath=rstudio)
 
 ## Add set up docs to `./binder`
-- you need to have an installation of R (`install.R`) - here is where to specify packages you want installed.
-- `runtime.txt` specifies the version of R to install
-- you can have an `environment.yml` file in here for conda environments, but don't put any r packages in the `dependencies:` section as it will conflict with the other set up files. Add packages you want installed in the `install.R` file. 
+- e.g., `environment.yml`
 
 ## Set up binder:
 ![](./rstudio-binder-setup.png)
