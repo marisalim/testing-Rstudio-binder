@@ -3,6 +3,7 @@ channels:
     - bioconda
     - defaults
 dependencies:
+    - r-base=3.6
     - fastqc
     - trimmomatic
     - salmon
