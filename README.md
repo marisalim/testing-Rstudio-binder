@@ -8,13 +8,14 @@ with latest version of r only:
 
 ## Add set up docs to `./binder`
 - e.g., `environment.yml`
+- one of the `dependencies:` must be `r-base` or else the binder will build, but launch will fail because R must be installed during the build for Rstudio to work
 - if you want certain R packages to be installed, put them in the `environment.yml` file, you don't need `runtime.txt` or `install.R` files.
 - note that whatever goes in the `environment.yml` was installed when the binder opened, so if you want to demo installations of e.g., fastqc/trimmomatic/salmon with conda, don't include them in the yml file!
 
 ## Set up binder:
 ![](./rstudio-binder-setup.png)
 
-- enter URL, branch to point binder to (something like `stable-binder` here), and in "Path to Notebook", change from default "File" to "URL" and type `rstudio` to indicate you want an Rstudio binder -> this is what sets up the binder in Rstudio. Rstudio has a Console for running R commands and a Terminal for bash. This set up is nice because you can use the Rstudio panels to e.g., show/edit text files, run R or bash, and see/navigate file system/plots/installed R packages.
+- enter URL, branch to point binder to (something like `stable-binder`), and in "Path to Notebook", change from default "File" to "URL" and type `rstudio` to indicate you want an Rstudio binder -> this is what sets up the binder in Rstudio. Rstudio has a Console for running R commands and a Terminal for bash. This set up is nice because you can use the Rstudio panels to e.g., show/edit text files, run R or bash, and see/navigate file system/plots/installed R packages.
 - copy/paste the binder badge link
 - click "launch". It takes a while to create.
 
