@@ -1,6 +1,6 @@
 # testing-Rstudio-binder
 
-[![Binder](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/marisalim/testing-Rstudio-binder/stable-binder?urlpath=rstudio)
+[![Binder](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/marisalim/testing-Rstudio-binder/stable-binder-new?urlpath=rstudio)
 
 ## Add set up docs to `./binder`
 - e.g., `environment.yml`
