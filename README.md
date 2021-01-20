@@ -15,7 +15,7 @@ with latest version of r only:
 ## Set up binder:
 ![](./rstudio-binder-setup.png)
 
-- enter URL, branch to point binder to (something like `stable-binder`), and in "Path to Notebook", change from default "File" to "URL" and type `rstudio` to indicate you want an Rstudio binder -> this is what sets up the binder in Rstudio. Rstudio has a Console for running R commands and a Terminal for bash. This set up is nice because you can use the Rstudio panels to e.g., show/edit text files, run R or bash, and see/navigate file system/plots/installed R packages.
+- enter URL, branch to point binder to (something like `stable-binder`), and in "Path to Notebook", change from default "File" to "URL" and type `rstudio` to indicate you want an Rstudio binder -> this is what sets up the binder in Rstudio. Rstudio has a Console for running R commands and a Terminal for bash. This set up is nice because you can use the Rstudio panels to e.g., show/edit text files in Source panel, run code (many computing languages available) in Console or Terminal, and see/navigate file system/plots/installed R packages.
 - copy/paste the binder badge link
 - click "launch". It takes a while to create.
 
