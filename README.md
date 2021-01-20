@@ -1,5 +1,7 @@
 # testing-Rstudio-binder
 
+[![Binder](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/marisalim/testing-Rstudio-binder/stable-binder?urlpath=rstudio)
+
 Set up binder:
 ![](./rstudio-binder-setup.png)
 
