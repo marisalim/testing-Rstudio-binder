@@ -6,12 +6,13 @@ with r (version set to 3.6), fastqc, trimmomatic, and salmon installed in binder
 with latest version of r only (on `just-r`):
 [![Binder](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/marisalim/testing-Rstudio-binder/just-r?urlpath=rstudio)
 
-with r package ggplot in env yaml file (on `just-r-package`): <- can you create an Rstudio binder with only an r package in yml or does it need `r-base` too?
+with r package ggplot in env yaml file (on `just-r-package`): 
+- can you create an Rstudio binder with only an r package in yml or does it need `r-base` too? no, `r-base` is not absolutely necessary! this binder works with only `r-ggplot2` in the yml, but it also did not install most recent r version (it installed 4.0.2 instead of 4.0.3)
 [![Binder](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/marisalim/testing-Rstudio-binder/just-r-package?urlpath=rstudio)
 
 ## Add set up docs to `./binder`
 - e.g., `environment.yml`
-- one of the `dependencies:` must be `r-base` or else the binder will build, but launch will fail because R must be installed during the build for Rstudio to work
+- one of the `dependencies:` must be `r-base` or some R package, otherwise while the binder will build, the launch will fail because R must be installed during the build for Rstudio to work
 - if you want certain R packages to be installed, put them in the `environment.yml` file, you don't need `runtime.txt` or `install.R` files.
 - note that whatever goes in the `environment.yml` was installed when the binder opened, so if you want to demo installations of e.g., fastqc/trimmomatic/salmon with conda, don't include them in the yml file!
 
