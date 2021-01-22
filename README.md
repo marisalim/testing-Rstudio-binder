@@ -1,10 +1,13 @@
 # testing-Rstudio-binder
 
-with r (version set to 3.6), fastqc, trimmomatic, and salmon installed in binder:
+with r (version set to 3.6), fastqc, trimmomatic, and salmon installed in binder (on `stable-binder`):
 [![Binder](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/marisalim/testing-Rstudio-binder/stable-binder?urlpath=rstudio)
 
-with latest version of r only:
+with latest version of r only (on `just-r`):
 [![Binder](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/marisalim/testing-Rstudio-binder/just-r?urlpath=rstudio)
+
+with r package ggplot in env yaml file (on `just-r-package`): <- can you create an Rstudio binder with only an r package in yml or does it need `r-base` too?
+[![Binder](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/marisalim/testing-Rstudio-binder/just-r-package?urlpath=rstudio)
 
 ## Add set up docs to `./binder`
 - e.g., `environment.yml`
