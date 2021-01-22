@@ -3,4 +3,4 @@ channels:
     - bioconda
     - defaults
 dependencies:
-    - r-ggplot2
+    - r-base
