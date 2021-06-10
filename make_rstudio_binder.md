@@ -1,4 +1,6 @@
-# Making a RStudio binder
+# Making an RStudio binder
+
+In this tutorial, you'll learn how to make an RStudio binder environment.
 
 What you'll need:
 - GitHub account
@@ -20,12 +22,10 @@ A GitHub repository (often referred to as a "repo") is like a workspace for all 
 We can create a shareable online computer environment called a "binder" using environment specification file(s) from the repo. 
 All the files in the repo will be included in the binder (i.e., scripts, inputs).                                                                                                                         
 
-If you've **just created a new GitHub account**, after verifying your email, a page should open with a few options. Click the option to "Create a repository":
-                                                                                                                                  
+If you've **just created a new GitHub account**, after verifying your email, a page should open with a few options. Click the option to "Create a repository":                    
 ![](./screenshots/create_a_repo.png)   
                                                                                                                                     
 If you **already had a GitHub account**, starting from the home page (<https://github.com/>), click on the green "New" button in the top left corner of the page:                                                                                                                                     
-
 ![](./screenshots/create_a_repo2.png)                                                                      
                                                                                                                                     
 - Name your repository (tip: avoid using spaces in the name, use underscore (`_`) or dash (`-`) instead)
@@ -33,7 +33,7 @@ If you **already had a GitHub account**, starting from the home page (<https://g
                                                                                                                    
 ### Step 3: Create binder environment files
 
-For this tutorial, we're going to create our binder from a GitHub branch. This approach allows you to create new binders from different branches, without altering the `main` branch and exclude any files you do not want on the binder.                                                                    
+For this tutorial, we're going to create our binder from a GitHub branch. This approach allows you to create new binders from different branches, without altering the `main` branch, and to exclude any files you do not want on the binder.                                                                    
 
 - Create a new branch (tip: avoid using spaces in the name, use underscore (`_`) or dash (`-`) instead)
 - Click the "Add file" dropdown button and select "Create new file"
@@ -51,21 +51,20 @@ dependencies:
 
 After adding the above text, scroll down the page. Enter a commit message (i.e. "create env file for binder"; default message is "Create environment.yml") and click "Commit new file".
 
-For workshops, we typically include workshop command scripts or other demo files to the main repo directory (**not** in the `binder/` directory). Add any files as needed (the files are created like the environment file, but you can change the file extensions to be i.e., ".sh" for bash files.                                                                      
+For workshops, we typically include workshop command scripts or other demo files to the main repo directory (**not** in the `binder/` directory). Add any files as needed (the files are created like the environment file, but you can change the file extensions to be i.e., ".sh" for bash files.                                                                     
                                                                       
 ### Step 4: Create the binder
 
 We use [Pangeo binders](https://pangeo.io/) for workshops and lessons. Binders are flexible and shareable online computer environments. 
-They can be formatted to open bash terminal, Jupyter notebook, or Rstudio interfaces. 
-We often use Rstudio because it has a Console for running R commands and a Terminal for bash. 
-This set up is helpful because you can use the Rstudio panels to e.g., show/edit text files in Source panel, run code (many computing languages available) in Console or Terminal, and see/navigate file system/plots/installed R packages.
+They can be formatted to open bash terminal, Jupyter notebook, or RStudio interfaces. 
+We often use RStudio because it has a Console for running R commands and a Terminal for bash. 
+This set up is helpful because you can use the RStudio panels to e.g., show/edit text files in Source panel, run code (many computing languages available) in Console or Terminal, and see/navigate file system/plots/installed R packages.
                        
 - Go to: <https://binder.pangeo.io/>
 - Scroll down to fill in the table to "Build and launch a repository".
    - "GitHub repository name or URL": Enter your GitHub repo URL
    - "Git branch, tag, or commit": Enter your GitHub repo branch name
-   - "Path to a notebook file (optional)": change the default "File" dropdown to "URL". Type `rstudio` to indicate you want to make a RStudio binder.
-                                                
+   - "Path to a notebook file (optional)": change the default "File" dropdown to "URL". Type `rstudio` to indicate you want to make an RStudio binder.                                                
 ![](./screenshots/set_up_binder.png)
 
 - Click "launch" to start building the binder. This part can take several minutes to complete. If there are any errors during the build, they will show up in the logs below all the binder settings.
@@ -80,7 +79,11 @@ This set up is helpful because you can use the Rstudio panels to e.g., show/edit
   
 - Set aside time at the beginning of workshops for the binders to launch. We ask participants to click on the binder link as soon as they arrive, and by the time we've complete introductory material, the binders will usually be ready to use for the hands-on activities.
 - You can edit/add files to the binder's GitHub repository at any time. However, the binder will need to be re-built after changes are made and will take a few minutes to launch. Once the binder has been built, subsequent launching should be faster.       
-- The binders are generally resilient to time-out issues, but they do occur. We've found that the resolution to binder errors (i.e., 503, 504) is to close and re-launch. 
+- The binders are generally resilient to time-out issues, but they do occur. We've found that the resolution to binder errors (i.e., 502, 503, 504) is to close and re-launch.
+- Make sure participants export any files they've modified during the workshop **before** closing the binder, otherwise those changes will be lost.
+
+Here are more examples of RStudio binders: https://github.com/binder-examples/r-conda 
+
                         
   
   
